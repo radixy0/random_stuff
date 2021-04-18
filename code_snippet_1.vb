@@ -1,5 +1,6 @@
         Dim newWebKey As String = "CHANGED@CHANGED" 'Placeholder, get new web key from text field!
-
+        
+        'change webkey in input (from list) using regex
         Dim pattern As Regex = New Regex(".*\[(.*webkey"":"")(.*)("",""lineItemId.*)\].*")
         Dim match As Match = pattern.Match(input)
         Dim toSend As String = ""
@@ -10,7 +11,7 @@
         End If
 
 
-        'Convert object to bytes
+        'Convert toSend to bytes
         Dim jsondata As Byte() = Encoding.UTF8.GetBytes(toSend)
 
         'set up webrequest

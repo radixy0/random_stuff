@@ -4,6 +4,7 @@
         Dim match As Match = pattern.Match(input)
         Dim toSend As String = ""
         If (match.Success) Then
+        'first drop quotes in regex and then manually add quotes, because if null the webkey does not have quotes!
             toSend = match.Groups(1).ToString() + """" + newWebKey + """" + match.Groups(3).ToString()
         Else
             'Throw Error: Regular Expression did not match input

@@ -16,7 +16,7 @@
 
         'set up webrequest
         Dim request As WebRequest
-        request = WebRequest.Create("http://localhost:8080/echo") 'https://go.industrysoftware.automation.siemens.com/c2o/assignment/v2/assign")
+        request = WebRequest.Create("https://go.industrysoftware.automation.siemens.com/c2o/assignment/v2/assign")
         request.Method = "POST"
         request.ContentLength = jsondata.Length
         request.ContentType = "application/json"
